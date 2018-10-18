@@ -13,6 +13,7 @@
       min: 0,
 			template: null,
 			itemContainer: ".field-group",
+			uniqueIdentifierPrefix: "new",
 			beforeAdd: function () {},
 			afterAdd: function (item) {},
 			beforeDelete: function (item) {},
@@ -99,7 +100,7 @@
 		 */
 		var getUniqueTemplate = function () {
 			var template = $(settings.template).html();
-			template = template.replace(/{\?}/g, "new" + i++); 	// {?} => iterated placeholder
+			template = template.replace(/{\?}/g, settings.uniqueIdentifierPrefix + i++); 	// {?} => iterated placeholder
 			template = template.replace(/\{[^\?\}]*\}/g, ""); 	// {valuePlaceholder} => ""
 			return $(template);
 		};
