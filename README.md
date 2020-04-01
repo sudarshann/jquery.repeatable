@@ -24,7 +24,7 @@ At a bare minimum, the html form should contain a container for which the repeat
 The field group template contains html for the group of form fields that will be repeatable. Here are a few things to keep in mind:
 
 * The form fields need to be within a container element.
-* Include the symbol `{?}` when you need a unique value. You must at least include this symbol in the `name` attribute of your form fields to ensure they are all unique.
+* Include the symbol `{?}` when you need a unique value. Include the symbol `{??}` when you need a unique value plus 1 this is help full if the unique value us 0 and to show human readable value to users.  You must at least include this symbol in the `name` attribute of your form fields to ensure they are all unique.
 * If you want users to be able to delete items, include a delete button in the template.
 
 ```html
