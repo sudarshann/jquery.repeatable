@@ -10,7 +10,7 @@
 			addTrigger: ".add",
 			deleteTrigger: ".delete",
 			max: null,
-      min: 0,
+      			min: 0,
 			template: null,
 			itemContainer: ".field-group",
 			uniqueIdentifierPrefix: "new",
@@ -101,6 +101,7 @@
 		var getUniqueTemplate = function () {
 			var template = $(settings.template).html();
 			template = template.replace(/{\?}/g, settings.uniqueIdentifierPrefix + i++); 	// {?} => iterated placeholder
+			template = template.replace(/{\?\?}/g, settings.uniqueIdentifierPrefix + i); 	// {?} => iterated placeholder
 			template = template.replace(/\{[^\?\}]*\}/g, ""); 	// {valuePlaceholder} => ""
 			return $(template);
 		};
