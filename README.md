@@ -49,7 +49,8 @@ The following JavaScript can be used in conjunction with the form and template s
 ```javascript
 $(function() {
   $("form .repeatable-container").repeatable({
-    template: "#people"
+    template: "#people",
+    uniqueIdentifierPrefix: ""
   });
 });
 ```
@@ -70,3 +71,4 @@ When a user clicks on the `.add` button, the script will render a new `.field-gr
 * __beforeDelete__: _Optional_. (function (itemToDelete)) A function to run before an item is deleted from the repeatable item container. Default: none
 * __afterDelete__: _Optional_. (function) A function to run after an item is deleted from the repeatable item container. Default: none
 * __template__: _Required_. (string) The selector that contains the form field group template.
+* __uniqueIdentifierPrefix__: _Required_. (string). Can also be empty. The value that gets replaced with when a new group is added.
